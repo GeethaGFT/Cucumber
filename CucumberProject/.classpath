@@ -34,6 +34,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry combineaccessrules="false" kind="src" path="/SeleniumProject"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SeleniumWebDriverProject"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/TestNG Project"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

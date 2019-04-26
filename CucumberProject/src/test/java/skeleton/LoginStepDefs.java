@@ -9,7 +9,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import com.test.DriverUtility;
+import com.util.DriverUtility;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -24,7 +24,7 @@ public class LoginStepDefs {
 	
 	@Before
 	public void before() {
-		driver=DriverUtility.getDriver("Chrome");	
+		driver=DriverUtility.getDriver("chrome");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 	}

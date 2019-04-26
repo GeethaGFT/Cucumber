@@ -3,11 +3,10 @@ package skeleton;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-import com.test.DriverUtility;
+import com.util.DriverUtility;
 
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -21,7 +20,7 @@ public class AdminLogin {
 	AdminPage Page1;
 	@Before
 	public void init() {
-		 driver=DriverUtility.getDriver("Chrome");
+		 driver=DriverUtility.getDriver("chrome");
 		 Page1=PageFactory.initElements(driver,AdminPage.class);
 		 driver.manage().window().maximize();
 		 driver.manage().timeouts().implicitlyWait(25,TimeUnit.SECONDS);
@@ -38,9 +37,8 @@ public class AdminLogin {
 		AdminPage.password.sendKeys("Password456");
 		AdminPage.loginbutton.click();
 		AdminPage.addprod.click();
-		AdminPage.catname.click();
-		AdminPage.subcatname.click();
-		
+		AdminPage.scat.click();
+				
 	}
 
 	@Then("admin login successfully")

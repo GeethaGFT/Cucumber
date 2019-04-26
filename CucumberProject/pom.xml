@@ -6,7 +6,7 @@
 	<artifactId>CucumberProject</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
-		<cucumber-version>4.3.0</cucumber-version>
+		<cucumber-version>LATEST</cucumber-version>
 	</properties>
 	<dependencies>
 		<dependency>
