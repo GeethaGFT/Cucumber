@@ -1,18 +1,16 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/skeleton/login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/skeleton/AdminAddPdt.feature");
 formatter.feature({
-  "name": "Login Feature",
+  "name": "add the product to TestMeApp Feature",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Invalid User Scenario",
+  "name": "Login as Admin scenario",
   "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@Invalid"
-    }
-  ]
+  "keyword": "Scenario"
+});
+formatter.before({
+  "status": "passed"
 });
 formatter.before({
   "status": "passed"
@@ -24,68 +22,31 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "The URL of TestMe App",
+  "name": "url of TestMeApp",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "LoginStepDefs.the_URL_of_TestMe_App()"
+  "location": "AdminLogin.url_of_TestMeApp()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters the invalid data",
-  "rows": [
-    {
-      "cells": [
-        "aaa",
-        "Password123"
-      ]
-    },
-    {
-      "cells": [
-        "Lalitha",
-        "yyy"
-      ]
-    },
-    {
-      "cells": [
-        "123",
-        "456"
-      ]
-    }
-  ],
+  "name": "admin enters the data",
   "keyword": "When "
 });
 formatter.match({
-  "location": "LoginStepDefs.user_enters_the_invalid_data(DataTable)"
+  "location": "AdminLogin.admin_enters_the_data()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user is in loginpage",
-  "rows": [
-    {
-      "cells": [
-        "1"
-      ]
-    },
-    {
-      "cells": [
-        "1"
-      ]
-    },
-    {
-      "cells": [
-        "1"
-      ]
-    }
-  ],
+  "name": "admin login successfully",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LoginStepDefs.user_is_in_loginpage(String\u003e)"
+  "location": "AdminLogin.admin_login_successfully()"
 });
 formatter.result({
   "status": "passed"

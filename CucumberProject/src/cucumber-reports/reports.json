@@ -1,0 +1,109 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2019-04-26T09:32:11.224Z",
+        "before": [
+          {
+            "result": {
+              "duration": 12073571056,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AdminLogin.init()"
+            }
+          },
+          {
+            "result": {
+              "duration": 4094027233,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginStepDefs.before()"
+            }
+          },
+          {
+            "result": {
+              "duration": 4349707435,
+              "status": "passed"
+            },
+            "match": {
+              "location": "RegisterStepDefs.init()"
+            }
+          },
+          {
+            "result": {
+              "duration": 13095838607,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AddCartStepDefs.init()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Login as Admin scenario",
+        "description": "",
+        "id": "add-the-product-to-testmeapp-feature;login-as-admin-scenario",
+        "after": [
+          {
+            "result": {
+              "duration": 179237634,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginStepDefs.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1788794974,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "url of TestMeApp",
+            "match": {
+              "location": "AdminLogin.url_of_TestMeApp()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4310232658,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "admin enters the data",
+            "match": {
+              "location": "AdminLogin.admin_enters_the_data()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 95490635,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "admin login successfully",
+            "match": {
+              "location": "AdminLogin.admin_login_successfully()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "add the product to TestMeApp Feature",
+    "description": "",
+    "id": "add-the-product-to-testmeapp-feature",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/skeleton/AdminAddPdt.feature",
+    "tags": []
+  }
+]

@@ -20,12 +20,12 @@ public class AdminLogin {
 	AdminPage Page1;
 	@Before
 	public void init() {
-		 driver=DriverUtility.getDriver("chrome");
-		 Page1=PageFactory.initElements(driver,AdminPage.class);
-		 driver.manage().window().maximize();
-		 driver.manage().timeouts().implicitlyWait(25,TimeUnit.SECONDS);
+		driver=DriverUtility.getDriver("chrome");
+		Page1=PageFactory.initElements(driver,AdminPage.class);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(25,TimeUnit.SECONDS);
 	}
-	
+
 	@Given("url of TestMeApp")
 	public void url_of_TestMeApp() {
 		driver.get("http://10.232.237.143:443/TestMeApp/login.htm");
@@ -38,13 +38,22 @@ public class AdminLogin {
 		AdminPage.loginbutton.click();
 		AdminPage.addprod.click();
 		AdminPage.scat.click();
-				
+		AdminPage.select();
+		AdminPage.subcat.click();
+		AdminPage.selectsub();
+		AdminPage.pdctname.sendKeys("Geetha");
+		AdminPage.price.sendKeys("600");
+		AdminPage.quantity.sendKeys("1");
+		AdminPage.brand.sendKeys("hp");
+		AdminPage.description.sendKeys("headphone");
+		AdminPage.addpdctbtn.click();
+
 	}
 
 	@Then("admin login successfully")
 	public void admin_login_successfully() {
-		Assert.assertTrue(AdminPage.adminhome.getText().contains("admin"));
-	   
+
+		Assert.assertTrue(AdminPage.successmsg.getText().contains("Succesfully"));
 	}
 
 
